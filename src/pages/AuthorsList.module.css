@@ -1,0 +1,81 @@
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #1a1a1a;
+}
+
+.content {
+  margin-top: 40px;
+  padding-bottom: 100px;
+}
+
+/* Секция буквы */
+.letterSection {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 0;
+  scroll-margin-top: 120px; /* Чтобы скролл не прилипал к краю */
+}
+
+.letterHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  margin: 0;
+  min-width: 100px;
+  color: #000;
+  line-height: 1;
+}
+
+/* Сетка имен */
+.namesList {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px 40px;
+}
+
+/* Элемент автора */
+.authorItem {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  display: inline-block;
+  width: fit-content;
+  position: relative;
+}
+
+/* линия */
+.authorItem::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: width 0.25s ease;
+}
+
+/* hover анимация */
+.authorItem:hover::after {
+  width: 100%;
+}
+/* Адаптивность для мобилок */
+@media (max-width: 768px) {
+  .letterSection {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .letterHeading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .namesList {
+    grid-template-columns: 1fr;
+  }
+}

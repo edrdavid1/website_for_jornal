@@ -1,0 +1,100 @@
+.categoryMenu {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
+.filterIcon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.letter {
+  font-family: var(--font-mono, monospace);
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.letter.visible {
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .letter:hover {
+    opacity: 0.8;
+  }
+}
+
+.letter:active {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+/* линия снизу */
+.categoryLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: width 0.25s ease;
+}
+
+@media (hover: hover) {
+  .categoryLink:hover::after {
+    width: 100%;
+  }
+}
+
+.categoryLink:active {
+  opacity: 0.6;
+}
+
+/* активная ссылка */
+.categoryLink.active::after {
+  width: 100%;
+}
+
+.categoryLink.active {
+  font-weight: bold;
+}
+
+.categoryLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000;
+}
+
+.alphaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.6rem;
+}

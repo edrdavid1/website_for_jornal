@@ -1,0 +1,82 @@
+.card {
+  margin-bottom: 40px; /* Увеличил отступ между карточками */
+}
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.title {
+  font-family: var(--font-serif); /* Изменено на Mono для всех заголовков */
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+@media (hover: hover) {
+  .titleLink:hover .title {
+    opacity: 0.6;
+  }
+}
+
+.titleLink:active .title {
+  opacity: 0.4;
+  transition: opacity 0.1s;
+}
+
+.excerpt {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  color: var(--text-main);
+  max-width: 550px;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+/* Стили для ссылок в мета-данных */
+.metaLink {
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+@media (hover: hover) {
+  .metaLink:hover {
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.metaLink:active {
+  color: var(--text-main);
+  opacity: 0.6;
+}
+
+.separator {
+  margin: 0 12px;
+  color: var(--text-muted);
+}
+
+.date {
+  color: var(--text-muted);
+}
+
+.by {
+  margin-right: 4px;
+}

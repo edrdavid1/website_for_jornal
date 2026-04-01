@@ -1,0 +1,129 @@
+.section {
+}
+
+.grid {
+  display: grid;
+  /* Сетка: Картинка (40%) | Метка (10%) | Статьи (50%) */
+  grid-template-columns: 40% 9.7% 1fr;
+  margin-top: 4rem;
+}
+
+/* Для блока Popular сетка отзеркаливается */
+.gridReverse {
+  display: grid;
+  /* Сетка: Статьи (50%) | Метка (10%) | Картинка (40%) */
+  grid-template-columns: 1fr 10% 40%; 
+  margin-top: 4rem;
+}
+
+/* Порядок элементов в DOM: 1.Label, 2.Image, 3.Articles */
+/* Для Latest: Image (1), Label (2), Articles (3) */
+.grid > .imageWrapper { order: 1; }
+.grid > .verticalLabel { order: 2; }
+.grid > .articlesWrapper { order: 3; }
+
+/* Для Popular: Articles (1), Label (2), Image (3) */
+.gridReverse > .articlesWrapper { order: 1; }
+.gridReverse > .verticalLabel { order: 2; }
+.gridReverse > .imageWrapper { order: 3; }
+
+.imageWrapper {
+  width: 100%;
+  height: 405px; /* Фиксированная высота для стабильности */
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* "Заливка" — картинка заполнит всё, лишнее обрежется */
+  object-position: center; /* Фокус всегда на центре изображения */
+  display: block;
+}
+
+/* Вертикальный текст L a t e s t */
+.verticalLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+/* В дизайне слово "popular" написано строчными буквами. Переопределяем: */
+.gridReverse .verticalLabel {
+  text-transform: lowercase;
+}
+
+.verticalLabel span {
+  margin-bottom: 8px; /* Расстояние между буквами по вертикали */
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Карточка отдельной статьи внутри Latest/Popular */
+.cardTitle {
+  font-family: var(--font-serif); /* Добавлено из макета */
+  font-weight: 400; /* На макете заголовки не жирные */
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cardExcerpt {
+  font-family: var(--font-serif); /* Добавлено из макета */
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cardMeta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #666;
+  /* В макете мета-теги написаны строчными буквами, меняем uppercase на lowercase */
+  text-transform: lowercase; 
+}
+
+@media (max-width: 768px) {
+  .grid,
+  .gridReverse {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Сбрасываем все специфические order десктопа на мобилках */
+  .grid > *,
+  .gridReverse > * {
+    order: initial !important;
+  }
+
+  .imageWrapper {
+    display: none;
+  }
+
+  .verticalLabel {
+    order: -1 !important; /* Принудительно заголовок вверх */
+    flex-direction: row;
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.2em;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .articlesWrapper {
+    order: 1 !important; /* Статьи под заголовком */
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+}

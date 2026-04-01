@@ -1,0 +1,41 @@
+/* src/styles/fonts.css */
+
+/*
+ * Bitter (Serif)
+ * Используется для заголовков
+ */
+@font-face {
+  font-family: 'Bitter';
+  src: url('/fonts/Bitter.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Fira Mono (Monospace)
+ * Используется для дат, мета-информации
+ */
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/FiraMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/FiraMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/FiraMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

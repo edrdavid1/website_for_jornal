@@ -1,0 +1,101 @@
+.issueHero {
+  display: flex;
+  gap: 60px; /* Отступ между картинкой и текстом */
+  align-items: stretch;
+  max-width: 1200px; /* Ограничитель ширины, настройте под ваш проект */
+  margin: 0 auto;
+}
+
+.leftCol {
+  flex: 1; /* Занимает 50% ширины */
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  object-fit: cover;
+  display: block;
+}
+
+.rightCol {
+  flex: 1; /* Занимает 50% ширины */
+  display: flex;
+  flex-direction: column;
+}
+
+.issueNumberContainer {
+  display: flex;
+  justify-content: flex-end; /* Выравниваем номер по правому краю */
+  margin-bottom: 40px;
+}
+
+.issueNumber {
+  font-family: monospace; /* Или ваш кастомный шрифт с засечками */
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.aboutSection {
+  flex-grow: 1; /* Заставляет этот блок занимать свободное место, отталкивая имя автора вниз */
+}
+
+.aboutSubtitle {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.aboutText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: left; /* Убрано justify, чтобы не было больших пробелов */
+}
+
+.skeletonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.errorText {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.artistSection {
+  margin-top: 40px; /* Отступ сверху, если текста будет мало */
+}
+
+.artistText {
+  font-size: 1rem;
+  color: #333;
+}
+
+.artistLink {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+
+.artistLink:hover {
+  opacity: 0.7;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+  .issueHero {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .issueNumberContainer {
+    justify-content: flex-start; /* На мобилке лучше выровнять слева */
+  }
+}

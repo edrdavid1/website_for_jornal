@@ -1,0 +1,165 @@
+.pageContainer {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 350px 80px 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* padding: 100px 0; */
+  gap: 20px;
+}
+
+/* Левая калонка */
+.leftCol {
+  position: relative;
+}
+
+.stickyContent {
+  position: sticky;
+  top: 120px; /* Адлегласць ад верху пры скроле */
+}
+
+.authorName {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+  font-family: var(--font-mono, monospace);
+}
+
+.bio {
+  /* font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 2rem; */
+  display: none;
+}
+
+.skeletonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.years {
+  margin-top: 20px;
+  font-family: 
+  monospace;
+  color: var(--text-muted);
+}
+
+/* Сярэдняя калонка */
+.midCol {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid var(--border-light);
+}
+
+.verticalLabel {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+/* Правая калонка */
+
+
+.contentSection {
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.artGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.artItem {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.artImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 1px solid var(--border-light);
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .artImage:hover {
+    transform: scale(1.02);
+  }
+}
+
+.artImage:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.artTitle {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin: 15px 0 5px 0;
+  font-weight: 400;
+}
+
+.artMeta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.empty {
+  padding: 100px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Адаптыўнасць */
+@media (max-width: 1100px) {
+  .mainGrid {
+    grid-template-columns: 1fr; /* Усё ў адну калонку на планшэтах */
+  }
+
+  .stickyContent {
+    position: static;
+    margin-bottom: 50px;
+  }
+
+  .midCol {
+    display: none; /* Хаваем вертыкальную палоску на мабільных */
+  }
+
+  .authorName {
+    font-size: 2.5rem;
+  }
+}

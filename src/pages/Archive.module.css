@@ -1,0 +1,168 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-main);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-main, #222);
+}
+
+.subtitle {
+  color: var(--text-secondary, #666);
+  font-size: 1.1rem;
+}
+
+/* Сетка по 3 в ряд */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* Карточка */
+.issueCard {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: none;
+}
+
+@media (hover: hover) {
+  .issueCard:hover {
+    transform: translateY(-8px);
+    box-shadow: none;
+  }
+}
+
+.issueCard:active {
+  transform: translateY(-4px) scale(0.98);
+  opacity: 0.9;
+  transition: all 0.1s ease;
+}
+
+/* Контейнер изображения (пропорции 3:4 для журналов) */
+.imageWrapper {
+  width: 100%;
+  padding-bottom: 140%;
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.coverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay при наведении */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay span {
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+@media (hover: hover) {
+  .issueCard:hover .coverImage {
+    transform: scale(1.08);
+  }
+
+  .issueCard:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.issueCard:active .coverImage {
+  transform: scale(1.04);
+}
+
+/* Подвал карточки */
+.cardFooter {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.issueNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main, #222);
+}
+
+.viewLink {
+  display: none;
+}
+
+.issueCard:hover .viewLink {
+  transform: translateX(5px);
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}

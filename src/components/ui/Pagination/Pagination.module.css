@@ -1,0 +1,43 @@
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px; /* Расстояние между цифрами и стрелками */
+  margin: 40px 0; /* Отступы сверху и снизу */
+}
+
+.arrow, .pageNumber {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px; /* Размер шрифта как на картинке */
+  color: #000;
+  padding: 0 8px;
+  font-family: inherit;
+  transition: opacity 0.2s ease;
+}
+
+/* Делаем стрелку полупрозрачной, если дальше листать нельзя */
+.arrow:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* Можно немного выделить активную страницу (по желанию) */
+.pageNumber.active {
+  font-weight: bold; 
+}
+
+@media (hover: hover) {
+  .arrow:hover:not(:disabled),
+  .pageNumber:hover:not(.active) {
+    opacity: 0.6;
+  }
+}
+
+.arrow:active:not(:disabled),
+.pageNumber:active:not(.active) {
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: all 0.1s;
+}

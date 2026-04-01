@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "№1",
+    "date": "2026-03-01",
+    "artist": "1",
+    "cover": "https://placehold.co/400x600?text=Cover+Removed"
+  },
+  {
+    "id": "2",
+    "title": "№2",
+    "date": "July 2026",
+    "cover": "https://placehold.co/400x600?text=Cover+Removed",
+    "artist": "0002"
+  },
+  {
+    "id": "3",
+    "title": "№3",
+    "date": "August 2026",
+    "cover": "https://placehold.co/400x600?text=Cover+Removed",
+    "artist": "0003"
+  }
+]

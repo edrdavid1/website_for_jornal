@@ -1,0 +1,81 @@
+/* globals.css */
+@import './fonts.css';
+
+:root {
+  /* Семейства шрифтов */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: 'Bitter', serif;
+  --font-mono: 'Fira Mono', monospace;
+  
+  /* Цвета */
+  --bg-color: #F3F4F4; /*#f7f6f2; Легкий "бумажный" оттенок */
+  --text-main: #111111;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --border-color: #111111;
+  --border-light: #eeeeee;
+  --scrollbar-thumb: #111111;
+  --scrollbar-track: #f7f6f2;
+}
+
+/* Стилизация скроллбара */
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Убираем стандартную синюю заливку при нажатии на мобильных */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Общий контейнер, ограничивающий ширину контента на больших мониторах */
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* Используем проценты для более гибких отступов */
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .app-wrapper {
+    max-width: 1400px; /* На ультра-широких можно чуть больше */
+  }
+}
+
+@media (max-width: 768px) {
+  .app-wrapper {
+    padding: 0 20px;
+  }
+}

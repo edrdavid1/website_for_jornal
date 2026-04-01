@@ -1,0 +1,84 @@
+.heroContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.textContent {
+  flex: 0 0 45%;
+}
+
+.title {
+  font-family: monospace; /* Подбери шрифт из макета */
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.text {
+  font-family: var(--font-serif, serif);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.text a {
+  color: #000;
+  font-family: var(--font-mono, monospace);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.text a:hover {
+  opacity: 0.7;
+}
+
+.imageWrapper {
+  flex: 0 0 50%;
+  aspect-ratio: 3/2; /* Или любой другой пропорции из макета */
+  background: var(--bg-secondary, #f5f5f5);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .textContent {
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  .imageWrapper {
+    flex: 1 1 100%;
+    order: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; /* Убрано justify, чтобы не было больших пробелов на мобильных */
+  }
+}

@@ -1,0 +1,32 @@
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Фиксируем три колонки на десктопе */
+  column-gap: 40px;
+  row-gap: 40px; /* Вернул 40px, так как убрали min-height */
+  margin-top: 40px;
+  align-items: start; /* Карточки не будут растягиваться на всю высоту строки */
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 0 16px;
+  }
+
+  .articlesGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: auto;
+  }
+}

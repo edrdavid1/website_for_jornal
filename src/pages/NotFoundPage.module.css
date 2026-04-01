@@ -1,0 +1,46 @@
+.container {
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.homeLink {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 12px 24px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.homeLink:hover {
+  background-color: var(--text-main);
+  color: var(--bg-color);
+}

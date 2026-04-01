@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 0;
+}
+
+.languages {
+  display: flex;
+  gap: 20px;
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  padding: 5px 0 0 0; 
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+.langBtnActive {
+  color: var(--text-main);
+}
+
+.langBtnActive::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-main);
+}
+
+.logoImg {
+  height: 45px;
+  width: auto;
+  display: block;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+    width: calc(100% + 40px); /* Компенсируем отступы app-wrapper */
+    margin: 0 -20px; /* Делаем шапку во всю ширину экрана */
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    order: -1; /* Логотип всегда сверху на мобильных */
+  }
+
+  .logo a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logoImg {
+    height: auto;
+    width: 90%; /* Делаем логотип крупным на мобильных */
+    max-width: none; /* Убираем жесткие ограничения */
+    padding: 0;
+    object-fit: contain;
+  }
+
+  .languages {
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 12px 0;
+    order: 1; /* Языки всегда под логотипом */
+  }
+
+  .langBtn {
+    font-size: 18px;
+    padding: 12px 8px;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  .langBtnActive::before {
+    top: auto;
+    bottom: 0;
+    height: 2px;
+  }
+}

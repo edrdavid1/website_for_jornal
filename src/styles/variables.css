@@ -1,0 +1,8 @@
+/* variables.css */
+/* Цвета, сетка, typography tokens */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-family: 'Arial', sans-serif;
+}

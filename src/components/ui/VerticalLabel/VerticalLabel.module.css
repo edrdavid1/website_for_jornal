@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  
+}
+
+.text {
+  writing-mode: vertical-rl; /* Поворачиваем текст */
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  font-family: var(--font-mono, monospace);
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  /* Делаем так, чтобы текст читался снизу вверх */
+  transform: rotate(180deg); 
+}
+
+.text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  font-size: 14px;
+}
+
+.verticalLabel {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+   font-family: var(--font-mono);
+  letter-spacing: 0.5em;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .text {
+    writing-mode: horizontal-tb; /* Возвращаем в обычный вид */
+    transform: none;
+    letter-spacing: 0.3em;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  .verticalLabel {
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.3em;
+  }
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "id": "000120260600010101",
+    "issue": "1",
+    "issue_order": 1,
+    "author_id": "0001",
+    "author": {
+      "en": "Author 0001",
+      "be": "Аўтар 0001",
+      "lt": "Autorius 0001",
+      "ru": "Автор 0001"
+    },
+    "date": "May 2026",
+    "category": "Prose",
+    "keywords": {
+      "en": [
+        "life",
+        "sentence",
+        "snow"
+      ],
+      "be": [
+        "жыццё",
+        "прысуд",
+        "снег"
+      ],
+      "lt": [
+        "gyvenimas",
+        "sprendimas",
+        "sniegas"
+      ],
+      "ru": [
+        "жизнь",
+        "приговор",
+        "снег"
+      ]
+    },
+    "isLatest": true,
+    "isPopular": true,
+    "title": {
+      "en": "Project Work 0001",
+      "be": "Праектная праца 0001",
+      "lt": "Projekto darbas 0001",
+      "ru": "Проектная работа 0001"
+    },
+    "excerpt": {
+      "en": "This is a sample work created to demonstrate the layout and typography of the project...",
+      "be": "Гэта ўзор працы, створаны для дэманстрацыі макета і тыпаграфікі праекта...",
+      "lt": "Tai pavyzdinis darbas, sukurtas projekto sumanymui ir tipografijai demonstruoti...",
+      "ru": "Это образец работы, созданный для демонстрации макета и типографики проекта..."
+    }
+  },
+  {
+    "id": "000120260600020102",
+    "issue": "1",
+    "issue_order": 2,
+    "author_id": "0002",
+    "author": {
+      "en": "Author 0002",
+      "be": "Аўтар 0002",
+      "lt": "Autorius 0002",
+      "ru": "Автор 0002"
+    },
+    "date": "April 2026",
+    "category": "Short Story",
+    "keywords": {
+      "en": [
+        "ember",
+        "city",
+        "ash"
+      ],
+      "be": [
+        "іскра",
+        "горад",
+        "попел"
+      ],
+      "lt": [
+        "žarija",
+        "miestas",
+        "pelenas"
+      ],
+      "ru": [
+        "уголёк",
+        "город",
+        "пепел"
+      ]
+    },
+    "isLatest": true,
+    "isPopular": true,
+    "title": {
+      "en": "Project Work 0002",
+      "be": "Праектная праца 0002",
+      "lt": "Projekto darbas 0002",
+      "ru": "Проектная работа 0002"
+    },
+    "excerpt": {
+      "en": "Sample content for demonstrating the application interface and data flow...",
+      "be": "Прыклад зместу для дэманстрацыі інтэрфейсу прыкладання і патоку дадзеных...",
+      "lt": "Pavyzdinis turinys, skirtas demonstruoti programos sąsają ir duomenų srautą...",
+      "ru": "Пример контента для демонстрации интерфейса приложения и потока данных..."
+    }
+  },
+  {
+    "id": "000120260600030103",
+    "issue": "1",
+    "issue_order": 3,
+    "author_id": "0003",
+    "author": {
+      "en": "Author 0003",
+      "be": "Аўтар 0003",
+      "lt": "Autorius 0003",
+      "ru": "Автор 0003"
+    },
+    "date": "March 2026",
+    "category": "Poem",
+    "keywords": {
+      "en": [
+        "forest",
+        "whisper",
+        "secret"
+      ],
+      "be": [
+        "лес",
+        "шэпт",
+        "сакрэт"
+      ],
+      "lt": [
+        "miškas",
+        "šnabždė",
+        "slaptas"
+      ],
+      "ru": [
+        "лес",
+        "шёпот",
+        "тайна"
+      ]
+    },
+    "isLatest": true,
+    "isPopular": true,
+    "title": {
+      "en": "Project Work 0003",
+      "be": "Праектная праца 0003",
+      "lt": "Projekto darbas 0003",
+      "ru": "Проектная работа 0003"
+    },
+    "excerpt": {
+      "en": "Generic placeholder for project work demonstration...",
+      "be": "Агульная заглушка для дэманстрацыі праектнай працы...",
+      "lt": "Bendras projekto darbo demonstravimo vietos rezervuaras...",
+      "ru": "Общая заглушка для демонстрации проектной работы..."
+    }
+  },
+  {
+    "id": "000120260600040200",
+    "issue": "0",
+    "issue_order": 0,
+    "author_id": "0004",
+    "author": {
+      "en": "Author 0004",
+      "be": "Аўтар 0004",
+      "lt": "Autorius 0004",
+      "ru": "Автор 0004"
+    },
+    "date": "June 2026",
+    "category": "Short Story",
+    "keywords": {
+      "en": [
+        "ember",
+        "city",
+        "ash"
+      ],
+      "be": [
+        "іскра",
+        "горад",
+        "попел"
+      ],
+      "lt": [
+        "žarija",
+        "miestas",
+        "pelenas"
+      ],
+      "ru": [
+        "уголёк",
+        "город",
+        "пепел"
+      ]
+    },
+    "isLatest": true,
+    "isPopular": true,
+    "title": {
+      "en": "Project Work 0004",
+      "be": "Праектная праца 0004",
+      "lt": "Projekto darbas 0004",
+      "ru": "Проектная работа 0004"
+    },
+    "excerpt": {
+      "en": "Sample text to illustrate the user interface and data rendering...",
+      "be": "Прыклад тэксту для ілюстрацыі карыстальніцкага інтэрфейсу і адлюстравання дадзеных...",
+      "lt": "Pavyzdinis tekstas, skirtas iliustruoti vartotojo sąsają ir duomenų atvaizdavimą...",
+      "ru": "Пример текста для иллюстрации пользовательского интерфейса и отображения данных..."
+    }
+  },
+  {
+    "id": "000220260700010101",
+    "issue": "2",
+    "issue_order": 1,
+    "author_id": "0001",
+    "author": {
+      "en": "Author 0001",
+      "be": "Аўтар 0001",
+      "lt": "Autorius 0001",
+      "ru": "Автор 0001"
+    },
+    "date": "July 2026",
+    "category": "Prose",
+    "isLatest": false,
+    "isPopular": false,
+    "title": {
+      "en": "Project Work 0005",
+      "be": "Праектная праца 0005",
+      "lt": "Projekto darbas 0005",
+      "ru": "Проектная работа 0005"
+    },
+    "excerpt": {
+      "en": "Illustrative content for architectural review...",
+      "be": "Ілюстрацыйны кантэнт для архітэктурнага агляду...",
+      "lt": "Iliustracinis turinys architektūrinei apžvalgai...",
+      "ru": "Иллюстративный контент для архитектурного обзора..."
+    }
+  },
+  {
+    "id": "000320260800010101",
+    "issue": "3",
+    "issue_order": 1,
+    "author_id": "0002",
+    "author": {
+      "en": "Author 0002",
+      "be": "Аўтар 0002",
+      "lt": "Autorius 0002",
+      "ru": "Автор 0002"
+    },
+    "date": "August 2026",
+    "category": "Short Story",
+    "isLatest": false,
+    "isPopular": false,
+    "title": {
+      "en": "Project Work 0006",
+      "be": "Праектная праца 0006",
+      "lt": "Projekto darbas 0006",
+      "ru": "Проектная работа 0006"
+    },
+    "excerpt": {
+      "en": "Final sample work for the portfolio demonstration...",
+      "be": "Апошняя ўзорная праца для дэманстрацыі партфоліо...",
+      "lt": "Galutinis pavyzdinis darbas portfelio demonstravimui...",
+      "ru": "Последняя образцовая работа для демонстрации портфолио..."
+    }
+  }
+]

@@ -1,0 +1,208 @@
+.container {
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.articleWrapper {
+  margin: 0 0 8rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-family: var(--font-mono); /* Изменено на Mono для заголовков */
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .titleLink:hover .title {
+    opacity: 0.7;
+  }
+}
+
+.titleLink:active .title {
+  opacity: 0.5;
+}
+
+.authorMeta {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.byPrefix {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.authorLink {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-main);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* линия снизу */
+.authorLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--text-main);
+  transition: width 0.25s ease;
+}
+
+@media (hover: hover) {
+  .authorLink:hover::after {
+    width: 100%;
+  }
+}
+
+.authorLink:active {
+  opacity: 0.6;
+}
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.categoryLink {
+font-family: var(--font-mono);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+@media (hover: hover) {
+  .categoryLink:hover {
+    opacity: 0.6;
+  }
+}
+
+.categoryLink:active {
+  opacity: 0.4;
+}
+
+.skeletonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paragraph {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6; /* Вернул к читаемому, при 1 текст слипается */
+  margin-bottom: 1.8rem;
+  color: var(--text-main);
+}
+
+/* Стили для контента из Markdown */
+.markdownBody {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.markdownBody p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.markdownBody h1, 
+.markdownBody h2, 
+.markdownBody h3 {
+  font-family: var(--font-mono);
+  /* text-transform: uppercase; */
+  letter-spacing: 0.1em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.markdownBody h1 {
+  font-size: 1.6rem;
+}
+
+.markdownBody h2 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.markdownBody h3 {
+  font-size: 1rem;
+}
+
+.markdownBody ul, 
+.markdownBody ol {
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+}
+
+.markdownBody li {
+  margin-bottom: 0.5rem;
+}
+
+.markdownBody blockquote {
+  border-left: 3px solid var(--border-light);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.markdownBody p {
+  color: var(--text-main);
+  text-align: justify;
+}
+
+.listSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-light);
+  margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .authorLink {
+    font-size: 1.3rem;
+  }
+  .articleWrapper {
+    margin-bottom: 5rem;
+  }
+}

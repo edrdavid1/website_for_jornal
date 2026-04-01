@@ -1,0 +1,30 @@
+/* src/components/ui/ShareButton/ShareButton.module.css */ 
+ .shareButton  { 
+   background : none; 
+   border: 1px solid var(--border-color, #000 ); 
+   display : inline-flex; 
+   align-items : center; 
+   justify-content : center; 
+   gap: 0.7rem ; 
+   padding: 8px 16px ; 
+   margin-top: 2rem ; 
+   font-size: 0.9rem ; 
+   text-transform : uppercase; 
+   letter-spacing: 0.1em ; 
+   cursor : pointer; 
+   font-family: var (--font-mono, monospace); 
+   transition: all 0.2s  ease; 
+   width : fit-content; 
+   color : inherit; 
+ } 
+ 
+ @media (hover: hover) {
+  .shareButton:hover  { 
+    background-color: var(--text-main, #000 ); 
+    color: var(--bg-color, #fff ); 
+  }
+} 
+ 
+ .shareButton:active  { 
+   transform: scale(0.97); /* Легкий тактильный отклик при клике */ 
+ } 
