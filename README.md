@@ -7,7 +7,6 @@ This repository contains the source code of a real-world commercial project deve
 ![React](https://img.shields.io/badge/React-19.2.0-blue?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?logo=vite)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-Pages-F38020?logo=cloudflare)
-![TypeScript](https://img.shields.io/badge/TypeScript-JSDoc-3178C6?logo=typescript)
 
 ---
 
